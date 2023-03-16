@@ -5,12 +5,13 @@ body{
 h1{
     text-decoration: underline;
 }
-form{
+form, #response-display{
     display:inline-block;
     width: 50%;
     background-color: rgb(126, 126, 255);
     padding: 10px 20px 20px 20px;
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 #start-survey-form{
@@ -31,4 +32,9 @@ button:hover{
 }
 button:active{
     box-shadow: inset 2px 2px 2px;
+}
+
+.bold-question{
+    font-weight: bold;
+    text-decoration-line: underline;
 }

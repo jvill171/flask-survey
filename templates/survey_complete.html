@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Thank you for completing this {{survey_title}}!</h1>
+<div id="response-display">
+    {% for r in session['response'] %}
+    <!-- <p>{{session['respionse']}}</p> -->
+    <h3 class="bold-question">{{survey_questions[loop.index-1].question}}</h3>
+    <p>{{r}}</p>
+{% endfor %}
+</div>
 {% endblock %}

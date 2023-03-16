@@ -67,5 +67,5 @@ def question_page(qid):
 @app.route('/survey-complete')
 def survey_complete():
     '''Display survey completed page, specifying which survey was completed'''
-    return render_template("survey_complete.html", survey_title=survey.title)
+    return render_template("survey_complete.html", survey_title=survey.title, survey_questions=survey.questions)
   
