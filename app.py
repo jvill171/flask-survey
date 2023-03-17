@@ -35,7 +35,7 @@ def do_answer():
     #Add collected response to session
     response=session[RESPONSE_KEY]
     response.append(ans_resp)
-    session['RESPONSE_KEY'] = response
+    session[RESPONSE_KEY] = response
 
     if(len(response) == len(survey.questions)):
         #All questions answered, redirect to survey-complete
