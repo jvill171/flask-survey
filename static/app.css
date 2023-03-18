@@ -14,14 +14,23 @@ form, #response-display{
     border-radius: 5px;
 }
 
-#start-survey-form{
+.no-decorate-form{
     background-color:inherit;
     border:none;
 }
-form > *{
+.no-decorate-form button{
+    padding: 10px;
+    background-color: rgb(46, 46, 46);
+    color:white;
+    font-weight: bold;
+    letter-spacing: 1em;
+    
+}
+form > :not(h1, button){
     text-align: left;
 }
 button{
+    margin-top: 10px;
     text-align: center;
     width: 100%;
     border-radius: 5px;
@@ -37,4 +46,10 @@ button:active{
 .bold-question{
     font-weight: bold;
     text-decoration-line: underline;
+}
+textarea{
+    min-width: 100%;
+    max-width:100%;
+    min-height: 15px;
+    max-height: 10rem;
 }
