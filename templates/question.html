@@ -7,6 +7,9 @@
     {% for choice in sat_quest.choices%}
     <p><input type="radio" name="answer" value="{{choice}}" required>{{choice}}</p>
     {% endfor %}
+    {% if sat_quest.allow_text %}
+    <textarea name="text"></textarea>
+    {% endif %}
     <button>Continue</button>
 </form>
 {% endblock %}
