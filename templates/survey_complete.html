@@ -2,10 +2,15 @@
 {% block content %}
 <h1>Thank you for completing this {{survey_title}}!</h1>
 <div id="response-display">
-    {% for r in session['response'] %}
-    <!-- <p>{{session['respionse']}}</p> -->
-    <h3 class="bold-question">{{survey_questions[loop.index-1].question}}</h3>
-    <p>{{r}}</p>
-{% endfor %}
+    {% for res in my_survey %}
+        <h3 class="bold-question">{{survey_questions[loop.index-1].question}}</h3>
+        <p>{{res['answer']}}</p>
+        {% if res['long_answer'] %}
+            <p>{{res['long_answer']}}</p>
+        {% endif %}
+    {% endfor %}
 </div>
+<form action="/" class="no-decorate-form">
+    <button>HOME</button>
+</form>
 {% endblock %}
